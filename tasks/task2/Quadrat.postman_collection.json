@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "916be5a7-8783-40a7-a3c8-89f4766ac81c",
+		"name": "Quadrat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST /grab",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"A\" : 10,\r\n    \"B\" : 20,\r\n    \"C\" : 30\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/grab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"grab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /solve",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
