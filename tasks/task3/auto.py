@@ -109,4 +109,4 @@ class Stock(Resource):
         if count:
             return cars, 200
         else:
-            return {"Error": "No one autos found in database"}
+            return {"Error": "No one autos found in database"}, 400
