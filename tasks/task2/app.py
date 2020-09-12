@@ -6,7 +6,6 @@ api = Api(app)
 
 coef = [0,0,0]
 
-#resource Items /items
 class Grab(Resource):
     def post(self):
         data = request.get_json()
@@ -18,11 +17,19 @@ class Grab(Resource):
 class Solve(Resource):
     def get(self):
         D = coef[1]*coef[1] - 4 * coef[0] * coef[2]
-        if (D < 0):
-            n = 0
-        elif (D == 0):
-            n = 1
-        else: n = 2
+        
+        if coef[0] == 0:
+            if coef[1] == 0:
+                n = 0
+            else:
+                n = 1
+        else:
+            if D < 0:
+                n = 0
+            elif D == 0:
+                n = 1
+            else: 
+                n = 2
 
         return {
             "A" : coef[0],

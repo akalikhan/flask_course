@@ -7,9 +7,9 @@ verify_ssl = true
 
 [packages]
 flask = "*"
-flask-jwt = "*"
 flask-restful = "*"
-flask-sqlalchemy = "*"
+flask-jwt = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.8"

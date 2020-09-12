@@ -59,7 +59,7 @@ class Auto(Resource):
             conn = sqlite3.connect('data.db')
             cur = conn.cursor()
 
-            update_query = "UPDATE {} SET max_speed=? and distance=? and handler=? and stock=? WHERE mark=?".format(self.__tablename__)
+            update_query = "UPDATE {} SET max_speed=?, distance=?, handler=?, stock=? WHERE mark=?".format(self.__tablename__)
             cur.execute(update_query, (data['max_speed'], data['distance'], data['handler'], data['stock'], mark))
 
             conn.commit()
